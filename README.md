@@ -15,7 +15,17 @@ Web application where users can generate QR codes from urls and access a collect
 - Javascropt ES6,
 - HTML, CSS, Bootstrap
 - node packages: express, ejs, mongoose, mongodb, qrcode, method-override, dotenv, bcrypt
-
+# Models 
+- User
+  - username: String
+  - email: String
+  - password: String 
+  - timestamps 
+- QR Code
+  - name/title: String
+  - qrcode: String (link to qrcode img) 
+  - timestamps
+  
 # Routes
 
 
