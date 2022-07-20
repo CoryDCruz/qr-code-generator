@@ -12,7 +12,7 @@ Web application where users can generate QR codes from urls and access a collect
 - I should be able to log out once I'm finished. 
 
 # Technologies Used
-- Javascropt ES6,
+- Javascript ES6,
 - HTML, CSS, Bootstrap
 - node packages: express, ejs, mongoose, mongodb, qrcode, method-override, dotenv, bcrypt
 # Models 
