@@ -17,9 +17,9 @@ Web application where users can generate QR codes from urls and access a collect
 - node packages: express, ejs, mongoose, mongodb, qrcode, method-override, dotenv, bcrypt
 # Models 
 - User
-  - username: String
-  - email: String
-  - password: String 
+  - username: String, require 
+  - email: String, require
+  - password: String, require, 8 char minimum
   - timestamps 
 - QR Code
   - name/title: String
@@ -27,7 +27,25 @@ Web application where users can generate QR codes from urls and access a collect
   - timestamps
   
 # Routes
-
+- User routes
+ - GET /login - render login page
+ - POST /login - authenticate/login user
+ - GET /signup - render signup form
+ - POST /signup - create a new user
+ - GET /logout - logout user
+ - GET /profile - render profile show page 
+ - GET /profile/edit - render profile edit page
+ - PUT /profile/edit - update profile details 
+ - DELETE /profile - delete user 
+ 
+- QR Code routes
+  - GET /qrcodes - render user's qrcodes (index)
+  - GET /qrcodes/new - render page to generate new qrcode 
+  - DELETE /qrcodes/:id - delete specific code from database
+  - PUT /qrcode/:id - update qrcode details 
+  - POST /qrcodes/new - create new qrcode from url and direct to qrcode show page
+  - GET /qrcodes/:id/edit - render qrcodes edit page 
+  - GET /qrcodes/:id - show page for specific qrcode. Options here to delete or edit       details 
 
 
 # Screenshots
