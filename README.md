@@ -28,15 +28,15 @@ Web application where users can generate QR codes from urls and access a collect
   
 # Routes
 - User routes
- - GET /login - render login page
- - POST /login - authenticate/login user
- - GET /signup - render signup form
- - POST /signup - create a new user
- - GET /logout - logout user
- - GET /profile - render profile show page 
- - GET /profile/edit - render profile edit page
- - PUT /profile/edit - update profile details 
- - DELETE /profile - delete user 
+  - GET /login - render login page
+  - POST /login - authenticate/login user
+  - GET /signup - render signup form
+  - POST /signup - create a new user
+  - GET /logout - logout user
+  - GET /profile - render profile show page 
+  - GET /profile/edit - render profile edit page
+  - PUT /profile/edit - update profile details 
+  - DELETE /profile - delete user 
  
 - QR Code routes
   - GET /qrcodes - render user's qrcodes (index)
