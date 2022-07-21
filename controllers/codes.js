@@ -1,5 +1,6 @@
 const express = require('express')
 const codesRouter = express.Router()
+const QRCode = require('qrcode')
 const Code = require('../models/code')
 const User = require('../models/user')
 
@@ -24,13 +25,20 @@ codesRouter.get('/', (req,res) => {
 })
 
 //new
+codesRouter.get('/new', (req, res) => {
+    res.render('./codes/new.ejs')
+})
 
 //delete
 
 //update
 
 //create
-
+codesRouter.post('/new', (req, res) => {
+    QRCode.toDataURL(req.body.url, function (err, url) {
+        console.log(url)
+    })
+})
 //edit
 
 //show
