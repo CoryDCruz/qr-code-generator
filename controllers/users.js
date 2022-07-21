@@ -42,13 +42,17 @@ usersRouter.get('/profile', (req, res) => {
 //authentication
 usersRouter.post('/login', (req, res) => {
     console.log(req.body)
-    User.findOne({ email: req.body.email }, '+password', (err, foundUser) => {
-        if(!foundUser) return res.render('./users/login.ejs', { err: 'Email or Password is incorrect'})
+    User.findOne( { email: req.body.email }, '+password', (err, foundUser) => {
+
+        if(!foundUser) {
+            return res.render('./users/login.ejs', { err: 'Email or Password is incorrect'})
+        }   
         if(!bcrypt.compareSync(req.body.password, foundUser.password)) {
+            console.log("password incorrect")
             return res.render('./users/login.ejs', { err: 'Incorrect Password'})
         }
         req.session.user = foundUser._id
-        res.redirect('/codes')
+        res.redirect('/')
     })
 })
 

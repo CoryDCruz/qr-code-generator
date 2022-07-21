@@ -12,10 +12,11 @@ codesRouter.use(function (req, res, next) {
 })
 //User's code index
 codesRouter.get('/', (req,res) => {
-    User.findById(req.session.user, (error, user) => {
+    User.findById(req.session.user, (error, foundUser) => {
         Code.find({ user: req.session.user }, (error, foundCodes) => {
             res.render('./codes/index.ejs', {
-                codes: foundCodes
+                codes: foundCodes, 
+                user: foundUser
             })
         })
     })
