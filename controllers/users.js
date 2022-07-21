@@ -38,6 +38,21 @@ usersRouter.get('/profile', (req, res) => {
 //update
 
 //create
+
+//authentication
+usersRouter.post('/login', (req, res) => {
+    console.log(req.body)
+    User.findOne({ email: req.body.email }, '+password', (err, foundUser) => {
+        if(!foundUser) return res.render('./users/login.ejs', { err: 'Email or Password is incorrect'})
+        if(!bcrypt.compareSync(req.body.password, foundUser.password)) {
+            return res.render('./users/login.ejs', { err: 'Incorrect Password'})
+        }
+        req.session.user = foundUser._id
+        res.redirect('/codes')
+    })
+})
+
+
 usersRouter.post('/signup', (req, res) => {
     if (req.body.password.length < 7) {
         return res.render('./users/signup.ejs', 
@@ -54,7 +69,7 @@ usersRouter.post('/signup', (req, res) => {
             })
         } else {
             req.session.user = user._id
-            res.redirect('/user/profile')
+            res.redirect('/users/profile')
         }
     })
 })
