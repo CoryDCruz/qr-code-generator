@@ -1,13 +1,14 @@
 //dependencies 
 require('dotenv').config()
-require('ejs')
+const ejs = require('ejs')
+const expressLayouts = require('express-ejs-layouts')
 const express = require('express')
 const session = require('express-session')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const methodOverride = require('method-override')
-const usersRoute = require('./controllers/users')
-const codesRoute = require('./controllers/codes')
+const usersController = require('./controllers/users')
+const codesController = require('./controllers/codes')
 
 const app = express()
 
@@ -42,7 +43,14 @@ app.use(session({
 }))
 
 
+app.set('view engine', 'ejs')
 
+app.get('/', (req, res) => {
+    res.redirect('/codes')
+})
+
+app.use('/codes', codesController)
+app.use('/users', usersController)
 
 
 
