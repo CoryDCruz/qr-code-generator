@@ -1,6 +1,9 @@
-<lablel class="form-label">Your Name</lablel>
-<input type="name" id="signupName" class="form-control form-control-lg"/>
-<lablel class="form-label">Your Email</lablel>
-<input type="email" id="signupEmail" class="form-control form-control-lg"/>
-<lablel class="form-label">Password</lablel>
-<input type="password" id="signupPassword" class="form-control form-control-lg"/>
+<form action="/users/signup" method="post">
+    <label class="form-label">Your Name</label>
+    <input type="name" id="signupName" class="form-control form-control-lg" name="name"/>
+    <label class="form-label">Your Email</label>
+    <input type="email" id="signupEmail" class="form-control form-control-lg" name="email"/>
+    <label class="form-label">Password</label>
+    <input type="password" id="signupPassword" class="form-control form-control-lg" name="password"/>
+    <input type="submit" value="Submit">
+</form>

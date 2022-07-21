@@ -17,12 +17,18 @@ usersRouter.get('/', (req,res) => {
     res.send('This is the User Index')
 })
 
+// login page
 usersRouter.get('/login', (req, res) => {
     res.render('./users/login.ejs')
 })
 
+// signup page
 usersRouter.get('/signup', (req, res) => {
     res.render('./users/signup.ejs')
+})
+
+usersRouter.get('/profile', (req, res) => {
+    res.render('./user/profile.ejs')
 })
 
 //new
@@ -32,7 +38,26 @@ usersRouter.get('/signup', (req, res) => {
 //update
 
 //create
-
+usersRouter.post('/signup', (req, res) => {
+    if (req.body.password.length < 7) {
+        return res.render('./users/signup.ejs', 
+        { 
+            err: "Password must be at least 7 characters in length"
+        })
+    }
+    const hash = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(SALT_ROUNDS))
+    req.body.password = hash
+    User.create(req.body, (error, user) => {
+        if (error){
+            res.render('.user/signup.ejs', {
+                err: 'User email already exists'
+            })
+        } else {
+            req.session.user = user._id
+            res.redirect('/user/profile')
+        }
+    })
+})
 //edit
 
 //show
