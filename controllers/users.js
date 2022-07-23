@@ -55,6 +55,16 @@ usersRouter.get('/profile', (req, res) => {
 //delete
 
 //update
+usersRouter.put('/edit', (req, res) => {
+    User.findByIdAndUpdate(req.session.user, req.body, 
+        {
+            mew: true
+        },
+        (error) => {
+            res.redirect('/users/profile')
+        }
+        )
+})
 
 //create
 
