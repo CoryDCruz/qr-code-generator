@@ -35,9 +35,14 @@ codesRouter.get('/new', (req, res) => {
 
 //create
 codesRouter.post('/new', (req, res) => {
-    QRCode.toDataURL(req.body.url, function (err, url) {
-        console.log(url)
-    })
+    QRCode.toDataURL(req.body.codeUrl, function (err, url) {
+        req.body.codeUrl = url
+        req.body.user = req.session.user
+        Code.create(req.body, (err, code) => {
+            res.redirect('/')
+        })
+    })   
+    
 })
 //edit
 

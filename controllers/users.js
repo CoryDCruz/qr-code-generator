@@ -41,7 +41,7 @@ usersRouter.get('/profile', (req, res) => {
 
 //authentication
 usersRouter.post('/login', (req, res) => {
-    console.log(req.body)
+    
     User.findOne( { email: req.body.email }, '+password', (err, foundUser) => {
 
         if(!foundUser) {

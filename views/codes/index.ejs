@@ -1,2 +1,10 @@
-<h1>This is where the User's Codes will display</h1> 
-<h1> <%= user %> </h1>
+<h1>This is where the User's Codes will display</h1>
+<ul>
+    <% codes.forEach(code => { %>
+        <li>
+            <h1><%= code.title %> </h1>
+            <img src="<%= code.codeUrl %>" alt="qr code" srcset="">
+            <p><%= code.description %> </p>
+        </li>
+    <% }) %>
+</ul>
