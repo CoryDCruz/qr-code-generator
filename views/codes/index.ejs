@@ -1,16 +1,23 @@
-<h1>This is where the User's Codes will display</h1>
-<a href="http://localhost:4000/codes/new">New</a>
-<ul>
-    <% codes.forEach(code => { %>
-        <li>
-            <h1 class="text-danger"><%= code.title %> </h1>
+<%- include('../partials/header.ejs') %>
+<div class="d-grid gap-2">
+<a class="btn btn-secondary my-2 my-sm-0" role="button" href="/codes/new">New QR Code</a>
+</div>
+  <% codes.forEach(code => { %>
+    <div class="card border-success mb-3" style="max-width: 20rem;">
+        <div class="card-header"><%= code.title %> </div>
+        <div class="card-body">
             <img src="<%= code.codeUrl %>" alt="qr code" srcset="">
-            <p><%= code.description %> </p>
-            <a href="http://localhost:4000/codes/edit/<%= code._id %>">Edit</a>
-            <form action="/codes/<%= code._id %>?_method=DELETE" method="POST">
-                <input type="submit" value="Delete">
-            </form>
-        </li>
-    <% }) %>
-</ul>
+          <p class="card-text"><%= code.description %> </p>
+          <a class="btn btn-success btn-sm" href="http://localhost:4000/codes/edit/<%= code._id %>">Edit</a>
+          <form action="/codes/<%= code._id %>?_method=DELETE" method="POST">
+          <input class="btn btn-danger btn-sm"type="submit" value="Delete">
+          </form>
+        </div>
+  <% }) %>
 
+
+  
+
+
+ 
+ 
