@@ -1,0 +1,8 @@
+<h1>Edit Page</h1>
+<form action="/edit?_method=PUT" method="POST">
+    <label>Name</label>
+        <input type="text" class="form-control" value="<%= user.name %>" name="name">
+    <label>Email</label>
+        <input type="text" class="form-control" value="<%= user.email %>" name="email"/>
+    <input type="submit" value="submit">
+</form>

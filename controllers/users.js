@@ -27,20 +27,28 @@ usersRouter.get('/signup', (req, res) => {
     res.render('./users/signup.ejs')
 })
 
+// logout
 usersRouter.get('/logout', (req,res) => {
     req.session.destroy((error) => {
         if(error){
             res.send(error)
         }
         else {
-            res.redirect('/')
+            res.render('./users/logout.ejs')
         }
     })
 })
 
+// profile
 usersRouter.get('/profile', (req, res) => {
-    res.render('./user/profile.ejs')
+    User.findById(req.session.user, (err, foundUser) => {
+        res.render('./users/profile.ejs', {
+            user: foundUser
+        })
+    })
 })
+
+
 
 //new
 
@@ -89,6 +97,14 @@ usersRouter.post('/signup', (req, res) => {
     })
 })
 //edit
+usersRouter.get('/edit', (req,res) => {
+    User.findById(req.session.user, (err, foundUser) => {
+        res.render('./users/edit.ejs', {
+            user: foundUser
+        })
+    })
+
+})
 
 //show
 
