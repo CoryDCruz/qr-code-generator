@@ -1,11 +1,18 @@
 <%- include('../partials/header.ejs') %>
 <form action="/users/login" method="post">
-    <label for="inputEmail" class="sr-only">Email Address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email Address" name="email">
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password">
-    <input type="submit" value="Submit">
+<div class="form-group">
+    <label for="inputEmail" class="form-label mt-4">Email address</label>
+    <input type="email" class="form-control" name="email" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword" class="form-label mt-4">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+  </div>
 </form>
+
+
+
 
  
  

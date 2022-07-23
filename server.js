@@ -33,6 +33,7 @@ db.on('error', (error) => {
 //middleware 
 
 app.use(express.urlencoded({ extended: false }))
+app.use(expressLayouts)
 app.use(express.json())
 app.use(methodOverride('_method'))
 app.use(morgan('dev'))

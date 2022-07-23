@@ -30,6 +30,11 @@ codesRouter.get('/new', (req, res) => {
 })
 
 //delete
+codesRouter.delete('/:id', (req, res) => {
+    Code.findByIdAndRemove(req.params.id, (err, deletedCode) => {
+        res.redirect('/')
+    })
+})
 
 
 //update
