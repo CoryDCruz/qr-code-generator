@@ -31,7 +31,18 @@ codesRouter.get('/new', (req, res) => {
 
 //delete
 
+
 //update
+codesRouter.put('/edit/:id', (req, res) => {
+    Code.findByIdAndUpdate(req.params.id, req.body, 
+        {
+            mew: true
+        },
+        (error) => {
+            res.redirect('/')
+        }
+        )
+})
 
 //create
 codesRouter.post('/new', (req, res) => {
@@ -45,7 +56,13 @@ codesRouter.post('/new', (req, res) => {
     
 })
 //edit
-
+codesRouter.get('/edit/:id', (req, res) => {
+    Code.findById(req.params.id, (err, foundCode) => {
+        res.render('./codes/edit.ejs', {
+            code: foundCode
+        })
+    })
+})
 //show
 
 module.exports = codesRouter
