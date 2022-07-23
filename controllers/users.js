@@ -27,6 +27,17 @@ usersRouter.get('/signup', (req, res) => {
     res.render('./users/signup.ejs')
 })
 
+usersRouter.get('/logout', (req,res) => {
+    req.session.destroy((error) => {
+        if(error){
+            res.send(error)
+        }
+        else {
+            res.redirect('/')
+        }
+    })
+})
+
 usersRouter.get('/profile', (req, res) => {
     res.render('./user/profile.ejs')
 })
