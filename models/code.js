@@ -4,7 +4,6 @@ const Schema = mongoose.Schema
 const CodeSchema = new Schema(
     {
         title: String,
-        description: String,
         codeUrl: String, 
         user: { type: Schema.Types.ObjectId, ref: 'User'},
     },
