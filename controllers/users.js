@@ -19,7 +19,7 @@ usersRouter.get('/', (req,res) => {
 
 // login page
 usersRouter.get('/login', (req, res) => {
-    res.render('./users/login.ejs')
+    res.render('./users/login.ejs', {err: ""})
 })
 
 // signup page
@@ -66,7 +66,7 @@ usersRouter.put('/edit', (req, res) => {
         )
 })
 
-//create
+
 
 //authentication
 usersRouter.post('/login', (req, res) => {
