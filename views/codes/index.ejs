@@ -1,26 +1,31 @@
 <%- include('../partials/header.ejs') %>
 
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center p-3">
     <a class="btn btn-secondary my-2 my-sm-0" role="button" href="/codes/new">Create New QR Code</a>
   </div>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <% codes.forEach(code => { %>
-        <div class="card border-primary mb-3 bg-secondary" style="max-width: 20rem;">
-            <div class="card-header d-flex justify-content-center"><%= code.title %> </div>
-            <div class="card-body">
-              <div class="d-flex justify-content-center">
-                <img src="<%= code.codeUrl %>" alt="qr code" srcset="">
-              </div>
-                
-              <p class="card-text d-flex justify-content-center"><%= code.description %> </p>
-              <div class="d-flex justify-content-center">
-                <a class="btn btn-success btn-sm" href="http://localhost:4000/codes/edit/<%= code._id %>">Edit</a>
-                <form action="/codes/<%= code._id %>?_method=DELETE" method="POST">
-                  <input class="btn btn-danger btn-sm" type="submit" value="Delete">
-                </form>
-              </div>
+          <div class="col-3">
+            <div class="card border-primary mb-3 bg-secondary" style="max-width: 20rem;">
+              <div class="card-header d-flex justify-content-center"><%= code.title %> </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-center p-3">
+                  <img src="<%= code.codeUrl %>" alt="qr code" srcset="">
+                </div>
+                <div class="d-flex justify-content-center">
+                  <div class="p-2">
+                    <a class="btn btn-success btn-md" href="http://localhost:4000/codes/edit/<%= code._id %>">Edit</a>
+                  </div>
+                  <div class="p-2">
+                    <form action="/codes/<%= code._id %>?_method=DELETE" method="POST">
+                      <input class="btn btn-danger btn-md" type="submit" value="Delete">
+                    </form>
+                  </div>
+                </div>
             </div>
+            </div>
+         </div>
       <% }) %>
     </div>
   </div>  
