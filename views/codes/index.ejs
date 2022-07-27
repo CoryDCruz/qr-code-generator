@@ -1,12 +1,12 @@
 <%- include('../partials/header.ejs') %>
 
-  <div class="d-flex justify-content-center p-3">
-    <a class="btn btn-secondary my-2 my-sm-0" role="button" href="/codes/new">Create New QR Code</a>
+  <div class="d-flex justify-content-start p-3">
+    <a class="btn btn-secondary my-2 my-sm-0" role="button" href="/codes/new">Generate New QR Code</a>
   </div>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row no-gutters">
       <% codes.forEach(code => { %>
-          <div class="col-3">
+          <div class="col-md-3">
             <div class="card border-primary mb-3 bg-secondary" style="max-width: 20rem;">
               <div class="card-header d-flex justify-content-center"><%= code.title %> </div>
               <div class="card-body">
