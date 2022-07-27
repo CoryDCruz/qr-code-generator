@@ -3,6 +3,17 @@
     <div class="row justify-content-center">
         <div class="col-12 col-sm-6 col-md-3">
         <form action="/users/login" method="post">
+            <% if (err == "Email or Password is incorrect") { %>
+                <div class="alert alert-dismissible alert-primary">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong><%= err %> </strong>
+                  </div>
+            <% } else if (err == "Incorrect Password") { %>
+                <div class="alert alert-dismissible alert-primary p-3">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong><%= err %> </strong>
+                  </div>
+                  <% } %>
             <div class="form-group mx-auto">
                 <label for="inputEmail" class="form-label mt-4">Email address</label>
                 <input type="email" class="form-control" name="email" placeholder="Enter email">
@@ -20,9 +31,7 @@
     </div>
 </div>
 
-<% if (err) { %>
-    <h1>Incorrect Password</h1>
-<% } %>
+
 
 
 
