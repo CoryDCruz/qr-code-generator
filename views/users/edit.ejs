@@ -1,6 +1,6 @@
 <%- include('../partials/header.ejs') %>
-<%- include('../partials/footer.ejs') %>
-<div class="d-flex justify-content-center">
+
+<div class="d-flex justify-content-center p-3">
     <a class="btn btn-secondary my-2 my-sm-0" role="button" href="/users/profile">Back</a>
 </div>
 <div class="container-fluid">
@@ -16,10 +16,12 @@
                 <input type="email" class="form-control" value="<%= user.email %>" name="email"/>
             </div>
             <div class="d-grid gap-2 p-3">
-                <input class="btn btn-large btn-primary" type="submit" value="Submit Edit">
+                <input class="btn btn-large btn-primary" type="submit" value="Confirm Edit">
             </div>
         </div>
         </form> 
         </div>
     </div>
 </div>
+
+<%- include('../partials/footer.ejs') %>

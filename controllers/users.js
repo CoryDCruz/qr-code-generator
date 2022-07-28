@@ -24,7 +24,7 @@ usersRouter.get('/login', (req, res) => {
 
 // signup page
 usersRouter.get('/signup', (req, res) => {
-    res.render('./users/signup.ejs')
+    res.render('./users/signup.ejs', { err: ""})
 })
 
 // logout
@@ -58,7 +58,7 @@ usersRouter.get('/profile', (req, res) => {
 usersRouter.put('/edit', (req, res) => {
     User.findByIdAndUpdate(req.session.user, req.body, 
         {
-            mew: true
+            new: true
         },
         (error) => {
             res.redirect('/users/profile')
@@ -97,12 +97,12 @@ usersRouter.post('/signup', (req, res) => {
     req.body.password = hash
     User.create(req.body, (error, user) => {
         if (error){
-            res.render('.user/signup.ejs', {
+            res.render('./users/signup.ejs', {
                 err: 'User email already exists'
             })
         } else {
             req.session.user = user._id
-            res.redirect('/users/profile')
+            res.redirect('/users/profile', { err: ""})
         }
     })
 })
