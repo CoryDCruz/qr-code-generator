@@ -58,6 +58,9 @@ app.set('view engine', 'ejs')
 app.get('/', (req, res) => {
     res.redirect('/codes')
 })
+app.get('/about', (req, res) => {
+    res.render('about.ejs')
+})
 
 app.use('/codes', codesController)
 app.use('/users', usersController)
