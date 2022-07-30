@@ -41,7 +41,7 @@ codesRouter.delete('/:id', (req, res) => {
 codesRouter.put('/edit/:id', (req, res) => {
     Code.findByIdAndUpdate(req.params.id, req.body, 
         {
-            mew: true
+            new: true
         },
         (error) => {
             res.redirect('/')

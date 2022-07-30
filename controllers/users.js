@@ -102,7 +102,7 @@ usersRouter.post('/signup', (req, res) => {
             })
         } else {
             req.session.user = user._id
-            res.redirect('/users/profile', { err: ""})
+            res.redirect('/users/profile')
         }
     })
 })
@@ -116,6 +116,6 @@ usersRouter.get('/edit', (req,res) => {
 
 })
 
-//show
+
 
 module.exports = usersRouter
