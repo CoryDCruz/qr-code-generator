@@ -1,0 +1,39 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-3">
+            <form action="/users/signup" method="post">
+                <% if (err == "Password must be at least 7 characters in length") { %>
+                    <div class="alert alert-dismissible alert-primary">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <strong><%= err %> </strong>
+                      </div>
+                <% } else if (err == "User email already exists") { %>
+                    <div class="alert alert-dismissible alert-primary p-3">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <strong><%= err %> </strong>
+                      </div>
+                      <% } %>
+            <div class="form-group mx-auto">
+                <label for="inputName" class="form-label mt-4">Your Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter name">
+            </div>
+            <div class="form-group mx-auto">
+                <label for="inputEmail" class="form-label mt-4">Your Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Enter email">
+            </div>
+            <div class="form-group mx-auto">
+                <label for="inputPassword" class="form-label mt-4">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+            </div>
+            <div class="d-grid gap-2 p-3">
+                <input class="btn btn-large btn-primary" type="submit" value="Sign Up">
+            </div>
+        </div>
+        </form> 
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs') %>
