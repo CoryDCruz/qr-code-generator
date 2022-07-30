@@ -49,15 +49,17 @@ Web application where users can generate QR codes from urls and access a collect
 
 
 # Screenshots
-<img width="1436" alt="image" src="https://user-images.githubusercontent.com/30585039/181937171-ba0bde98-0429-4ff2-9c23-78f975177922.png">
-<img width="1431" alt="image" src="https://user-images.githubusercontent.com/30585039/181937176-e04a5640-1919-4fe9-94ce-56a0e5f2ac94.png">
-<img width="1431" alt="image" src="https://user-images.githubusercontent.com/30585039/181937203-bcf0e20b-6fa7-4f65-81e4-17f70e81f9d8.png">
-<img width="1438" alt="image" src="https://user-images.githubusercontent.com/30585039/181937212-b9b4b642-57ab-45e0-9997-cf14d8cf7ca0.png">
-<img width="1436" alt="image" src="https://user-images.githubusercontent.com/30585039/181937223-9c0c0f8e-3bd5-4353-8e35-b828e3fb3da6.png">
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/30585039/181937235-aab7430f-5843-4f60-b272-fa12992219ce.png">
-<img width="1439" alt="image" src="https://user-images.githubusercontent.com/30585039/181937241-e2548407-56d1-4574-b60e-1a8d31647979.png">
-<img width="1436" alt="image" src="https://user-images.githubusercontent.com/30585039/181937380-12fcbcea-9faf-4e69-bb67-b720f10e4802.png">
-<img width="1440" alt="image" src="https://user-images.githubusercontent.com/30585039/181937247-a4161981-9d86-40dd-bf8b-f507e183f10c.png">
+![image](https://user-images.githubusercontent.com/30585039/181937497-acf2bb1e-ce91-4ed8-b4f3-ff27c7c6bbb3.png)
+![image](https://user-images.githubusercontent.com/30585039/181937515-d5c59c3a-e983-404e-a580-da28bdfc5d7e.png)
+![image](https://user-images.githubusercontent.com/30585039/181937532-d54be60d-3615-4be0-8a8a-d839ba56ccf2.png)
+![image](https://user-images.githubusercontent.com/30585039/181937543-4dc1de22-1264-459e-a9f9-c842ca75135b.png)
+![image](https://user-images.githubusercontent.com/30585039/181937565-27990a82-0d69-4a34-ba03-5b5d2b65733b.png)
+![image](https://user-images.githubusercontent.com/30585039/181937601-0354bba7-0cef-462e-b81e-16465b581bc1.png)
+![image](https://user-images.githubusercontent.com/30585039/181937608-a27f0f47-a3e5-4583-af59-1fc7ca578ddb.png)
+![image](https://user-images.githubusercontent.com/30585039/181937618-c0e0f3c0-8fea-4c2d-b214-e305e2450e2c.png)
+![image](https://user-images.githubusercontent.com/30585039/181937625-38069113-4acf-40e4-9acc-97748c22a09b.png)
+
+
 
 
 
