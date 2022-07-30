@@ -13,7 +13,7 @@ Web application where users can generate QR codes from urls and access a collect
 
 # Technologies Used
 - Javascript ES6,
-- HTML, CSS, Bootstrap
+- HTML, CSS, Bootstrap, Bootswatch Theme
 - node packages: express, ejs, mongoose, mongodb, qrcode, method-override, dotenv, bcrypt
 # Models 
 - User
