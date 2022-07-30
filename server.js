@@ -13,6 +13,7 @@ const codesController = require('./controllers/codes')
 const app = express()
 
 const { DATABASE_URL, SECRET } = process.env
+const PORT = process.env.PORT || 4000
 
 
 mongoose.connect(DATABASE_URL)
@@ -68,4 +69,4 @@ app.use('/users', usersController)
 
 
 
-app.listen(process.env.PORT, () => console.log(`Server is listening on port ${PORT}`))
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`))
