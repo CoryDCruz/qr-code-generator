@@ -51,7 +51,7 @@ Web application where users can generate QR codes from urls and access a collect
 # Screenshots
 ![image](https://user-images.githubusercontent.com/30585039/181937497-acf2bb1e-ce91-4ed8-b4f3-ff27c7c6bbb3.png)
 ![image](https://user-images.githubusercontent.com/30585039/181937515-d5c59c3a-e983-404e-a580-da28bdfc5d7e.png)
-![image](https://user-images.githubusercontent.com/30585039/181937532-d54be60d-3615-4be0-8a8a-d839ba56ccf2.png)
+![image](https://user-images.githubusercontent.com/30585039/181965055-03f9a29b-0cd8-4978-bab6-aa22df962151.png)
 ![image](https://user-images.githubusercontent.com/30585039/181937543-4dc1de22-1264-459e-a9f9-c842ca75135b.png)
 ![image](https://user-images.githubusercontent.com/30585039/181937565-27990a82-0d69-4a34-ba03-5b5d2b65733b.png)
 ![image](https://user-images.githubusercontent.com/30585039/181937601-0354bba7-0cef-462e-b81e-16465b581bc1.png)
