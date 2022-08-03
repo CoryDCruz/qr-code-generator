@@ -45,7 +45,6 @@ Web application where users can generate QR codes from urls and access a collect
   - PUT /qrcode/:id - update qrcode details 
   - POST /qrcodes/new - create new qrcode from url and direct to qrcode show page
   - GET /qrcodes/:id/edit - render qrcodes edit page 
-  - GET /qrcodes/:id - show page for specific qrcode. Options here to delete or edit details 
 
 
 # Screenshots
