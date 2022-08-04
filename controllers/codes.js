@@ -11,6 +11,7 @@ codesRouter.use(function (req, res, next) {
         res.redirect('/users/login')
     }
 })
+
 //User's code index
 codesRouter.get('/', (req,res) => {
     User.findById(req.session.user, (error, foundUser) => {
@@ -21,7 +22,6 @@ codesRouter.get('/', (req,res) => {
             })
         })
     })
-    
 })
 
 //new
@@ -35,7 +35,6 @@ codesRouter.delete('/:id', (req, res) => {
         res.redirect('/')
     })
 })
-
 
 //update
 codesRouter.put('/edit/:id', (req, res) => {
@@ -58,7 +57,6 @@ codesRouter.post('/new', (req, res) => {
             res.redirect('/')
         })
     })   
-    
 })
 //edit
 codesRouter.get('/edit/:id', (req, res) => {

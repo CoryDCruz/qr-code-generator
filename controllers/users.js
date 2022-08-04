@@ -48,12 +48,6 @@ usersRouter.get('/profile', (req, res) => {
     })
 })
 
-
-
-//new
-
-//delete
-
 //update
 usersRouter.put('/edit', (req, res) => {
     User.findByIdAndUpdate(req.session.user, req.body, 
@@ -65,8 +59,6 @@ usersRouter.put('/edit', (req, res) => {
         }
         )
 })
-
-
 
 //authentication
 usersRouter.post('/login', (req, res) => {
