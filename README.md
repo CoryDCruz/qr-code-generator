@@ -58,11 +58,10 @@ Web application where users can generate QR codes from urls and access a collect
 ![image](https://user-images.githubusercontent.com/30585039/181937618-c0e0f3c0-8fea-4c2d-b214-e305e2450e2c.png)
 ![image](https://user-images.githubusercontent.com/30585039/181937625-38069113-4acf-40e4-9acc-97748c22a09b.png)
 
-
-
-
-
-
+# Future Enhancements
+- filtering 
+- search functionality
+- better styled profile page
 
 # Deployment 
 Visit QRCodr: https://qrcodr.herokuapp.com/
