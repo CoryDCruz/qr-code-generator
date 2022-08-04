@@ -45,7 +45,7 @@ codesRouter.put('/edit/:id', (req, res) => {
         (error) => {
             res.redirect('/')
         }
-        )
+      )
 })
 
 //create
