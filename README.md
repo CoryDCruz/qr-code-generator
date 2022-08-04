@@ -62,7 +62,7 @@ Web application where users can generate QR codes from urls and access a collect
 - filtering 
 - search functionality
 - better styled profile page
-
+- sticky footer that doesn't cover other elements
 # Deployment 
 Visit QRCodr: https://qrcodr.herokuapp.com/
 
