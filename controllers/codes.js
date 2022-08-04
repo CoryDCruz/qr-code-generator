@@ -66,6 +66,5 @@ codesRouter.get('/edit/:id', (req, res) => {
         })
     })
 })
-//show
 
 module.exports = codesRouter
